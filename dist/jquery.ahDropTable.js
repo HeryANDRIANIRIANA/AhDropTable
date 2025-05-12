@@ -68,7 +68,7 @@ class AhDropTable{
 			
 			}
 		})
-		
+		feather.replace();
 		//DataTable inside
 		this.tableInit();
 		
@@ -110,7 +110,7 @@ class AhDropTable{
 	sklt(){
 		return `<div class="ahDropTableContainer">
 <li class="dropdown" >
-	<a href="javascript:void(0);" class="btnMain btn btn-white waves-effect neon-button" role="button"> <img src="${this.pplIcon}" alt="" class="feather-icon-red">
+	<a href="javascript:void(0);" class="btnMain btn btn-white waves-effect neon-button" role="button"> <i data-feather="box" class="feather-icon-red"></i><img src="${this.pplIcon}" alt="" class="feather-icon-red">
  <span class="label-count"></span>
 	</a>
 	<ul class="dropdown-menu" >
