@@ -8,8 +8,8 @@
 class AhDropTable{
 	constructor(selector="#myDropTable", options={}){
 		const{
-			pplIcon="plugins/feather-icon/icons/box.svg",
-			colvisIcon="plugins/feather-icon/icons/eye.svg"
+			pplIcon="box",
+			colvisIcon="eye"
 		}=options;
 		try{
 			this.pplIcon=pplIcon;
@@ -101,16 +101,17 @@ class AhDropTable{
 			buttons: [
 			  {
 				extend: 'colvis',
-				text: `<img src="${this.colvisIcon}" alt="" class="feather-icon-red">`
+				text: `<i data-feather="${this.colvisIcon}" class="feather-icon-red"></i>`
 			  }
 			]
 		});
+		feather.replace();
 	}
 	
 	sklt(){
 		return `<div class="ahDropTableContainer">
 <li class="dropdown" >
-	<a href="javascript:void(0);" class="btnMain btn btn-white waves-effect neon-button" role="button"> <i data-feather="box" class="feather-icon-red"></i><img src="${this.pplIcon}" alt="" class="feather-icon-red">
+	<a href="javascript:void(0);" class="btnMain btn btn-white waves-effect neon-button" role="button"> <i data-feather="${this.pplIcon}" class="feather-icon-red"></i>
  <span class="label-count"></span>
 	</a>
 	<ul class="dropdown-menu" >
